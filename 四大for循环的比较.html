@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+
+<script>
+  let books = [
+    {
+      id: '01',
+      name: "《速度与激情》",
+      time: '2018-1-1',
+      price: 10.00,
+      num: 1
+    },
+    {
+      id: '02',
+      name: "《第一滴血》",
+      time: '2016-1-1',
+      price: 10.00,
+      num: 1
+    },
+    {
+      id: '03',
+      name: "《锅盖头》",
+      time: '2018-6-18',
+      price: 10.00,
+      num: 1
+    },
+    {
+      id: '04',
+      name: "《极速反击》",
+      time: '2019-8-1',
+      price: 10.00,
+      num: 1
+    }
+  ];
+
+  function totalPrice() {
+    let totalPrice = 0;
+    /**普通for循环**/
+    for (let i = 0; i < books.length; i++) {
+      totalPrice += books[i].price * books[i].num
+    }
+    return totalPrice
+    /**for in循环**/
+    // for (let i in books) {
+    //   totalPrice += books[i].price * books[i].num
+    // }
+    // return totalPrice
+    /**for of循环**/
+    // for (let item of books) {
+    //   totalPrice += item.price * item.num
+    // }
+    // return totalPrice
+    /**forEach循环**/
+    // books.forEach(res => {
+    //   totalPrice += res.price * res.num
+    // });
+    // return totalPrice
+  }
+  console.log(totalPrice())
+
+
+</script>
+</body>
+
+</html>
